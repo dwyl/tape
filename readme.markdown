@@ -15,10 +15,10 @@ var test = require('tape');
 
 test('timing test', function (t) {
     t.plan(2);
-    
+
     t.equal(typeof Date.now, 'function');
     var start = Date.now();
-    
+
     setTimeout(function () {
         t.equal(Date.now() - start, 100);
     }, 100);
@@ -108,7 +108,7 @@ that will output something pretty if you pipe TAP into them:
  - https://github.com/axross/tap-diff
  - https://github.com/axross/tap-notify
  - https://github.com/zoubin/tap-summary
- 
+
 You use these reporters by piping the tape output into them. For example,
 try `node test/index.js | tap-spec`.
 
@@ -153,7 +153,7 @@ Available `opts` options are:
   See test.timeoutAfter.
 - opts.objectPrintDepth = 5. Configure max depth of expected / actual object
   printing.
-  
+
 If you forget to `t.plan()` out how many assertions you are going to run and you
 don't call `t.end()` explicitly, your test will hang.
 
@@ -190,7 +190,7 @@ Generate a passing assertion with a message `msg`.
 Automatically timeout the test after X ms.
 
 ## t.skip(msg)
- 
+
 Generate an assertion that will be skipped over.
 
 ## t.ok(value, msg)

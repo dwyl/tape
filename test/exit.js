@@ -5,7 +5,6 @@ var concat = require('concat-stream');
 
 tap.test('exit ok', function (t) {
     t.plan(2);
-
     var tc = function (rows) {
         t.same(rows.toString('utf8'), [
             'TAP version 13',
@@ -36,7 +35,6 @@ tap.test('exit ok', function (t) {
 
 tap.test('exit fail', function (t) {
     t.plan(2);
-
     var tc = function (rows) {
         t.same(rows.toString('utf8'), [
             'TAP version 13',
@@ -68,7 +66,6 @@ tap.test('exit fail', function (t) {
 
 tap.test('too few exit', function (t) {
     t.plan(2);
-
     var tc = function (rows) {
         t.same(rows.toString('utf8'), [
             'TAP version 13',
@@ -101,7 +98,6 @@ tap.test('too few exit', function (t) {
 
 tap.test('more planned in a second test', function (t) {
     t.plan(2);
-
     var tc = function (rows) {
         t.same(rows.toString('utf8'), [
             'TAP version 13',
